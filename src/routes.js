@@ -10,12 +10,12 @@ const dashboards = {
   // analytic: lazy(() => import('views/dashboards/DashboardsAnalytic')),
 };
 const user_management = {
-  index: lazy(() => import('views/apps/Apps')),
-  calendar: lazy(() => import('views/apps/calendar/Calendar')),
-  chat: lazy(() => import('views/apps/chat/Chat')),
-  contacts: lazy(() => import('views/apps/contacts/Contacts')),
-  mailbox: lazy(() => import('views/apps/mailbox/Mailbox')),
-  tasks: lazy(() => import('views/apps/tasks/Tasks')),
+  index: lazy(() => import('../src/User_Management/Apps')),
+  designation: lazy(() => import('../src/User_Management/Designations/Designations')),
+  newDesignation: lazy(() => import('../src/User_Management/Designations/NewDesignation')),
+  permissions: lazy(() => import('../src/User_Management/Permissions/Permissions')),
+  newPermissions: lazy(() => import('../src/User_Management/Permissions/NewPermission')),
+  responsibility: lazy(() => import('../src/User_Management/Responsibility/Responsibility')),
 };
 const pages = {
   index: lazy(() => import('views/pages/Pages')),
@@ -46,7 +46,7 @@ const pages = {
   },
   portfolio: {
     index: lazy(() => import('views/pages/portfolio/Portfolio')),
-    home:  lazy(() => import('views/pages/portfolio/PortfolioHome')),
+    home: lazy(() => import('views/pages/portfolio/PortfolioHome')),
     detail: lazy(() => import('views/pages/portfolio/PortfolioDetail')),
   },
   profile: {
@@ -149,7 +149,7 @@ const interfaces = {
     typography: lazy(() => import('views/interface/content/Typography')),
     menu: {
       index: lazy(() => import('views/interface/content/menu/Menu')),
-      horizontal:  lazy(() => import('views/interface/content/menu/Horizontal')),
+      horizontal: lazy(() => import('views/interface/content/menu/Horizontal')),
       vertical: lazy(() => import('views/interface/content/menu/Vertical')),
       verticalHidden: lazy(() => import('views/interface/content/menu/VerticalHidden')),
       verticalNoHidden: lazy(() => import('views/interface/content/menu/VerticalNoHidden')),
@@ -174,7 +174,7 @@ const routesAndMenuItems = {
       component: dashboards.index,
       label: 'menu.dashboards',
       icon: 'home',
-       subs: [
+      subs: [
         { path: '/default', label: 'menu.default', component: dashboards.default },
         // { path: '/visual', label: 'menu.visual', component: dashboards.visual },
         // { path: '/analytic', label: 'menu.analytic', component: dashboards.analytic },
@@ -192,15 +192,12 @@ const routesAndMenuItems = {
         // { path: '/mailbox', label: 'menu.mailbox', component: apps.mailbox },
         // { path: '/tasks', label: 'menu.tasks', component: apps.tasks },
         { path: '/designations', label: 'Designation', component: user_management.designation },
+        { path: '/newDesignation', component: user_management.newDesignation, },
         { path: '/permissions', label: 'Permissions', component: user_management.permissions },
+        { path: '/newPermission', component: user_management.newPermissions, },
         { path: '/responsibility', label: 'Responsibility', component: user_management.responsibility },
         { path: '/departments', label: 'Departments', component: user_management.departments },
         { path: '/users', label: 'Users', component: user_management.users },
-
-
-
-
-
       ],
     },
     {

@@ -1,0 +1,12 @@
+.user-table{
+    /* font-size: 20px; */
+    text-align: center;
+}
+.btn-gap{
+    padding: 0 10px;
+    color: transparent;
+}
+.search-header {
+    /* width: 1200px; */
+    max-width: 1200px;
+}
