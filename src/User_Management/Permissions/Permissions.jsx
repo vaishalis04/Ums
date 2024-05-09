@@ -4,8 +4,8 @@ import { Button, Col, Form, Row, Table, FormControl } from 'react-bootstrap';
 import BreadcrumbList from 'components/breadcrumb-list/BreadcrumbList';
 import { NavLink } from 'react-router-dom';
 
-const DesignationsPage = () => {
-  const title = 'Permissions Lists';
+const PermissionPage = () => {
+  const title = 'Permissions';
   const breadcrumbs = [
     { to: '', text: 'Home' },
     { to: 'User_Management', text: 'User Management' },
@@ -83,4 +83,4 @@ const DesignationsPage = () => {
   );
 };
 
-export default DesignationsPage;
+export default PermissionPage;

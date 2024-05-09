@@ -1,15 +1,15 @@
 import React from 'react';
 import { Button, Col, Form, Row, Table, FormControl } from 'react-bootstrap';
-
+// import './index.css';
 import BreadcrumbList from 'components/breadcrumb-list/BreadcrumbList';
 import { NavLink } from 'react-router-dom';
 
-const ResponsibilityPage = () => {
-  const title = 'Responsibility ';
+const DesignationsPage = () => {
+  const title = 'Departments ';
   const breadcrumbs = [
     { to: '', text: 'Home' },
     { to: 'User_Management', text: 'User Management' },
-    { to: 'Responsibility', text: 'Responsibility' },
+    { to: 'Departments', text: 'Departments' },
   ];
 
   return (
@@ -37,9 +37,9 @@ const ResponsibilityPage = () => {
               </div>
               <div className="add-btn">
                 {/* Update NavLink to navigate to path="/newDesignation" */}
-                <NavLink to="/user_management/newResponsibility">
+                <NavLink to="/user_management/NewDepartments">
                   <Button variant="outline-secondary" type="submit">
-                    + New Responsibility
+                    + New Department
                   </Button>
                 </NavLink>
               </div>
@@ -55,8 +55,7 @@ const ResponsibilityPage = () => {
           <thead>
             <tr>
               <th scope="col">S.no</th>
-              <th scope="col">Title</th>
-              <th scope="col">Top Designation</th>
+              <th scope="col">Department Name</th>
               <th scope="col">Created At</th>
               <th scope="col">Actions</th>
             </tr>
@@ -65,7 +64,7 @@ const ResponsibilityPage = () => {
             <tr>
               <td>1</td>
               <td>Mark</td>
-              <td>Otto</td>
+              
               <td>@mdo</td>
               <td>
                 <Button variant="primary" className="me-2">
@@ -83,4 +82,4 @@ const ResponsibilityPage = () => {
   );
 };
 
-export default ResponsibilityPage;
+export default DesignationsPage;

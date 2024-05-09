@@ -4,12 +4,12 @@ import { Button, Col, Form, Row, Table, FormControl } from 'react-bootstrap';
 import BreadcrumbList from 'components/breadcrumb-list/BreadcrumbList';
 import { NavLink } from 'react-router-dom';
 
-const ResponsibilityPage = () => {
-  const title = 'Responsibility ';
+const UsersPage = () => {
+  const title = 'Users ';
   const breadcrumbs = [
     { to: '', text: 'Home' },
     { to: 'User_Management', text: 'User Management' },
-    { to: 'Responsibility', text: 'Responsibility' },
+    { to: 'Users', text: 'Users' },
   ];
 
   return (
@@ -37,9 +37,9 @@ const ResponsibilityPage = () => {
               </div>
               <div className="add-btn">
                 {/* Update NavLink to navigate to path="/newDesignation" */}
-                <NavLink to="/user_management/newResponsibility">
+                <NavLink to="/user_management/NewUsers">
                   <Button variant="outline-secondary" type="submit">
-                    + New Responsibility
+                    + New User
                   </Button>
                 </NavLink>
               </div>
@@ -55,10 +55,12 @@ const ResponsibilityPage = () => {
           <thead>
             <tr>
               <th scope="col">S.no</th>
-              <th scope="col">Title</th>
-              <th scope="col">Top Designation</th>
-              <th scope="col">Created At</th>
+              <th scope="col">Name</th>
+              <th scope="col">Designation</th>
+              <th scope="col">Mobile</th>
+              <th scope="col">Email</th>
               <th scope="col">Actions</th>
+
             </tr>
           </thead>
           <tbody>
@@ -67,6 +69,8 @@ const ResponsibilityPage = () => {
               <td>Mark</td>
               <td>Otto</td>
               <td>@mdo</td>
+              <td>@mdo</td>
+
               <td>
                 <Button variant="primary" className="me-2">
                   Delete
@@ -83,4 +87,4 @@ const ResponsibilityPage = () => {
   );
 };
 
-export default ResponsibilityPage;
+export default UsersPage;

@@ -5,7 +5,7 @@ import BreadcrumbList from 'components/breadcrumb-list/BreadcrumbList';
 import { NavLink } from 'react-router-dom';
 
 const DesignationsPage = () => {
-  const title = 'Designation Lists';
+  const title = 'Designation ';
   const breadcrumbs = [
     { to: '', text: 'Home' },
     { to: 'User_Management', text: 'User Management' },

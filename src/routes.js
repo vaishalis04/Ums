@@ -16,6 +16,12 @@ const user_management = {
   permissions: lazy(() => import('../src/User_Management/Permissions/Permissions')),
   newPermissions: lazy(() => import('../src/User_Management/Permissions/NewPermission')),
   responsibility: lazy(() => import('../src/User_Management/Responsibility/Responsibility')),
+  newResponsibility: lazy(() => import('../src/User_Management/Responsibility/NewResponsiblity')),
+  department: lazy(() => import('../src/User_Management/Departments/Departments')),
+  newDepartments: lazy(() => import('../src/User_Management/Departments/NewDepartments')),
+  users: lazy(() => import('../src/User_Management/Users/Users')),
+  newUsers: lazy(() => import('../src/User_Management/Users/NewUsers')),
+
 };
 const pages = {
   index: lazy(() => import('views/pages/Pages')),
@@ -175,7 +181,7 @@ const routesAndMenuItems = {
       label: 'menu.dashboards',
       icon: 'home',
       subs: [
-        { path: '/default', label: 'menu.default', component: dashboards.default },
+        { path: '/default', label: 'default',component: dashboards.default },
         // { path: '/visual', label: 'menu.visual', component: dashboards.visual },
         // { path: '/analytic', label: 'menu.analytic', component: dashboards.analytic },
       ],
@@ -186,18 +192,17 @@ const routesAndMenuItems = {
       icon: 'screen',
       component: user_management.index,
       subs: [
-        // { path: '/calendar', label: 'menu.calendar', component: apps.calendar },
-        // { path: '/chat', label: 'menu.chat', component: apps.chat },
-        // { path: '/contacts', label: 'menu.contacts', component: apps.contacts },
-        // { path: '/mailbox', label: 'menu.mailbox', component: apps.mailbox },
-        // { path: '/tasks', label: 'menu.tasks', component: apps.tasks },
         { path: '/designations', label: 'Designation', component: user_management.designation },
         { path: '/newDesignation', component: user_management.newDesignation, },
         { path: '/permissions', label: 'Permissions', component: user_management.permissions },
         { path: '/newPermission', component: user_management.newPermissions, },
         { path: '/responsibility', label: 'Responsibility', component: user_management.responsibility },
-        { path: '/departments', label: 'Departments', component: user_management.departments },
+        { path: '/NewResponsibility', component: user_management.newResponsibility },
+        { path: '/departments', label: 'Departments', component: user_management.department },
+        { path: '/NewDepartments', component: user_management.newDepartments },
         { path: '/users', label: 'Users', component: user_management.users },
+        { path: '/NewUsers',  component: user_management.newUsers },
+
       ],
     },
     {
