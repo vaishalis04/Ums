@@ -23,6 +23,11 @@ const user_management = {
   newUsers: lazy(() => import('../src/User_Management/Users/NewUsers')),
 
 };
+const e_file_ragistrasion = {
+  createFile:lazy(() => import('./E-file/CreateFile')),
+  efileList:lazy(() => import('./E-file/EfileList')),
+  allfileList:lazy(() => import('./E-file/AlleFileList'))
+}
 const pages = {
   index: lazy(() => import('views/pages/Pages')),
   authentication: {
@@ -203,6 +208,17 @@ const routesAndMenuItems = {
         { path: '/users', label: 'Users', component: user_management.users },
         { path: '/NewUsers',  component: user_management.newUsers },
 
+      ],
+    },
+    {
+      path: `${appRoot}/efile`,
+      label: 'E-File Ragistrasion',
+      icon: 'screen',
+      component: e_file_ragistrasion.createFile,
+      subs: [
+        { path: '/createEfile', label: 'Create E-File', component: e_file_ragistrasion.createFile },
+        { path: '/efileList', label: 'E-file List', component: e_file_ragistrasion.efileList },
+        { path: '/allEfileList', label: 'All E-File List', component: e_file_ragistrasion.allfileList },
       ],
     },
     {
